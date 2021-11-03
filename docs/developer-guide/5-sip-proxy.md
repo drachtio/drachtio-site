@@ -4,7 +4,7 @@ Building a SIP proxy with drachtio is pretty darn simple.
 ```js
 srf.invite((req, res) => {
   srf.proxyRequest(req, 'sip.example1.com')
-    .then((results) => console.log(JSON.stringify(result)) );
+    .then((results) => console.log(JSON.stringify(results)) );
 });
 ```
 In the example above, we receive an INVITE and then proxy it onwards to the server at 'sip.example1.com'.
@@ -27,7 +27,7 @@ An implication of this is that we can call [Srf#proxyRequest](/docs/api#Srf+prox
 ```js
 srf.invite((req, res) => {
   srf.proxyRequest(req, ['sip.example1.com','sip2.example1.com]')
-    .then((results) => console.log(JSON.stringify(result)) );
+    .then((results) => console.log(JSON.stringify(results)) );
 });
 ```
 The above example illustrates that we can provide either a string or an Array of strings as the sip uri to proxy an INVITE to.  In the latter case, if the INVITE fails on the first sip server it will then be attempted on the second, and so on until a successful response is received or the list is exhausted.
@@ -36,7 +36,7 @@ The above example illustrates that we can provide either a string or an Array of
 ```js
 srf.invite((req, res) => {
   srf.proxyRequest(req)
-    .then((results) => console.log(JSON.stringify(result)) );
+    .then((results) => console.log(JSON.stringify(results)) );
 });
 ```
 In the above example there is no need to supply a sip uri if the drachtio server is acting as a simple outbound proxy.
@@ -51,7 +51,7 @@ srf.invite((req, res) => {
     provisionalTimeout: '2s',
     finalTimeout: '18s'
   })
-    .then((results) => console.log(JSON.stringify(result)) );
+    .then((results) => console.log(JSON.stringify(results)) );
 });
 ```
 See [Srf#proxyRequest](/docs/api#Srf+proxyRequest) for a detailed explanation of these options.
