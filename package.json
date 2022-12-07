@@ -15,7 +15,7 @@
     "config": "^1.30.0",
     "directory-tree": "^2.1.0",
     "dotenv": "^5.0.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "file-name": "^0.1.0",
     "ghost": "^1.22.0",
     "gulp-git": "^2.5.2",
