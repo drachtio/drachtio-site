@@ -224,6 +224,8 @@ block content
             +table_row('uri', 'string', 'request uri to send to.', false)
             +table_row('opts', 'Object', 'Configuration options.', false)
             +table_row('opts.method', 'string', 'method of request.   (Default: INVITE)', true)
+            +table_row('opts.callingNumber', 'string', 'from number of request', true)
+            +table_row('opts.callingName', 'string', 'from display name of request', false)
             +table_row('opts.localSdp', 'string', 'the local session description protocol to include in the SIP INVITE request', true)
             +table_row('opts.proxy', 'string', 'send the request through an outbound proxy, specified as full sip uri or address[:port]', true)
             +table_row('opts.headers', 'Object', 'SIP headers to include on the SIP request.', true)
